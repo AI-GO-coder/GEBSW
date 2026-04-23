@@ -462,7 +462,7 @@ def run_experiment_for_pair(source_name, target_name, pair_id, repeat_idx, devic
             start_time = time.time()
             transferred_img, final_w2, grad_flow = color_transfer_optimization(
                 source_img, target_img, dist_func,
-                n_steps=OPTIMIZATION_STEPS, lr=5.0,
+                n_steps=OPTIMIZATION_STEPS, lr=0.01,
                 device=device, record_gradient_flow=True
             )
             elapsed = time.time() - start_time

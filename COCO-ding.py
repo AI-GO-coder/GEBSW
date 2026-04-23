@@ -271,7 +271,7 @@ def to_scalar(val):
 
 
 def color_transfer_optimization(source_img, target_img, distance_func,
-                                n_steps=OPTIMIZATION_STEPS, lr=5.0, device=None):
+                                n_steps=OPTIMIZATION_STEPS, lr=0.01, device=None):
     if device is None:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     current_rgb = torch.from_numpy(source_img.astype(np.float32)).to(device).requires_grad_(True)

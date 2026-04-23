@@ -292,7 +292,7 @@ def to_scalar(val):
 
 
 def color_transfer_optimization(source_img, target_img, distance_func,
-                                n_steps=OPTIMIZATION_STEPS, lr=5.0,
+                                n_steps=OPTIMIZATION_STEPS, lr=0.01,
                                 track_gradient=True, device=None):
     """
     基于自动微分的颜色迁移优化。
